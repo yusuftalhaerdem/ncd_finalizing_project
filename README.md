@@ -34,7 +34,7 @@ export function get_dict_element(phrase:string): string{
 ```
 you can call it with phrase you are looking for
 ```
-near view $CONTRACT get_dict_element '{"phrase": "<phrase>"}
+near view $CONTRACT get_dict_element '{"phrase": "<some_phrase>"}'
 ```
 
 also i modified package.json like 
