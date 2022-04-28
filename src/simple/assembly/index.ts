@@ -47,12 +47,13 @@ function add_to_dict(phrase: string, entry:string,sender: string): string{
 export function get_dict_element(phrase:string): string{
   logging.log("in get dict elements")
 
-  let return_string = "error happened gel dict element"
+  let return_string = "dict element is somehow null"
   let dict_el = dict.get(phrase)
+
   if(dict_el===null)
     return return_string
   else 
-    return_string=dict_el.print_dict()
+    assert(return_string=dict_el.print_dict(), "an error happened while printing dict")
 
     logging.log(return_string)
     return return_string
