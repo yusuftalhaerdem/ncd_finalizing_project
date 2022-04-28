@@ -40,20 +40,19 @@ function add_to_dict(phrase: string, entry:string,sender: string): string{
     dict.set(phrase,dict_element)
   }
 
-
   return get_dict_element(phrase)
 }
 
 export function get_dict_element(phrase:string): string{
   logging.log("in get dict elements")
 
-  let return_string = "dict element is somehow null"
+  let return_string = phrase +" page is empty"
   let dict_el = dict.get(phrase)
 
   if(dict_el===null)
     return return_string
   else 
-    assert(return_string=dict_el.print_dict(), "an error happened while printing dict")
+    return_string=dict_el.print_dict(), "an error happened while printing dict"
 
     logging.log(return_string)
     return return_string
