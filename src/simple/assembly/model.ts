@@ -8,11 +8,11 @@ export class Dictionary_Element{
         this.phrase=phrase
         this.entries=entries
     }
-    print_dict(): string {
-        let str =" \n " +"phrase: "+this.phrase 
-        for(let i= 0; i< this.entries.length;i++) {
+    print_dict(): string { // returns the all entries belongs to the given phrase
+        let str ="phrase: "+this.phrase     // concats phrase and entries
+        for(let i= 0; i< this.entries.length;i++) { 
             let entry = this.entries[i]
-            str+= "\n  "+entry.comment+" \n\t       by user: "+entry.user
+            str+= "   \n  "+entry.comment+"  \n\t\t\t  by user: "+entry.user
         }
 
         return str

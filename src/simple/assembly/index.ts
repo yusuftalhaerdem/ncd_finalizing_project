@@ -17,7 +17,7 @@ function add_to_dict(phrase: string, entry:string,sender: string): string{
   const new_entry = new Entry(formatted_entry)
 
   if(dict.contains(phrase)){
-    logging.log("does contaion the phrase")
+    logging.log("dictionary does contaion the phrase")
     
     let dict_element = dict.get(phrase, null)
 
@@ -30,7 +30,7 @@ function add_to_dict(phrase: string, entry:string,sender: string): string{
     var new_dir = new Dictionary_Element(phrase,entries)
     dict.set(phrase,new_dir)
   }else{
-    logging.log("does not contain the phrase")
+    logging.log("dictionary does not contain the phrase")
 
     let entry_list = new PersistentVector<Entry>("pvec"+phrase)
     entry_list.push(new_entry)
@@ -53,7 +53,7 @@ export function get_dict_element(phrase:string): string{
     return return_string
   else 
     assert(return_string=dict_el.print_dict(), "an error happened while printing dict")
-
+    return_string = return_string.replaceAll("\t","    ")
     logging.log(return_string)
     return return_string
 }
