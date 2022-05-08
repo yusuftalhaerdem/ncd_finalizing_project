@@ -52,7 +52,7 @@ export function get_dict_element(phrase:string): string{
   if(dict_el===null)
     return return_string
   else 
-    return_string=dict_el.print_dict(), "an error happened while printing dict"
+    assert(return_string=dict_el.print_dict(), "an error happened while printing dict")
 
     logging.log(return_string)
     return return_string
